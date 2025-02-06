@@ -13,8 +13,8 @@ class NotesApp extends StatelessWidget {
     return MaterialApp(
       title: 'Notes',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          brightness: Brightness.light,
+          scaffoldBackgroundColor: const Color.fromARGB(148, 29, 28, 28)),
       home: const HomeView(),
     );
   }
