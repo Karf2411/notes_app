@@ -7,14 +7,25 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Padding(
+    return Scaffold(
+      body: const Padding(
         padding: EdgeInsets.only(top: 50, left: 16, bottom: 8, right: 16),
         child: Column(
           children: [
             CustomAppBar(title: 'Notes', icon: Icons.search),
             NotesList(),
           ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(40),
+        ),
+        backgroundColor: Colors.lightBlue,
+        onPressed: () {},
+        child: const Icon(
+          Icons.add,
+          size: 30,
         ),
       ),
     );
