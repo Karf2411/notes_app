@@ -15,7 +15,7 @@ class CustomAppBar extends StatelessWidget {
             fontSize: 24,
           ),
         ),
-        Spacer(),
+        const Spacer(),
         Container(
           height: 45,
           width: 45,

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:notes_app/Views/home_view.dart';
 
 void main() {
   runApp(const NotesApp());
+  debugPaintSizeEnabled = false;
 }
 
 class NotesApp extends StatelessWidget {
