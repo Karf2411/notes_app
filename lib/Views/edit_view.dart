@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/Widgets/custom_appbar.dart';
 import 'package:notes_app/Widgets/custom_textfield.dart';
 
-class AddNoteView extends StatelessWidget {
-  AddNoteView({super.key});
+class EditNoteView extends StatelessWidget {
+  EditNoteView({super.key});
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
@@ -16,7 +16,7 @@ class AddNoteView extends StatelessWidget {
           child: Column(
             children: [
               CustomAppBar(
-                title: 'Add Note',
+                title: 'Edit Note',
                 icon: Icons.check,
                 onTap: () {
                   if (formKey.currentState!.validate()) {
