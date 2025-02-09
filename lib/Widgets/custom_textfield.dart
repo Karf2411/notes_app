@@ -9,10 +9,16 @@ class CustomTextField extends StatelessWidget {
   final String hintText;
   final int maxLine;
   final double fontSize;
-
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      validator: (value) {
+        if (value!.isEmpty) {
+          return 'the field is empty';
+        } else {
+          return null;
+        }
+      },
       maxLines: maxLine,
       style: TextStyle(color: Colors.white, fontSize: fontSize),
       decoration: InputDecoration(

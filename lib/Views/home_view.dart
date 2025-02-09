@@ -26,7 +26,7 @@ class HomeView extends StatelessWidget {
         onPressed: () => Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const AddNoteView(),
+            builder: (context) => AddNoteView(),
           ),
         ),
         child: const Icon(
