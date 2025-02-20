@@ -12,6 +12,7 @@ class EditNoteView extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.only(top: 50, left: 16, bottom: 8, right: 16),
         child: Form(
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           key: formKey,
           child: Column(
             children: [

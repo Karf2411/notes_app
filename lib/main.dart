@@ -15,7 +15,7 @@ class NotesApp extends StatelessWidget {
     return MaterialApp(
       title: 'Notes',
       theme: ThemeData(
-          brightness: Brightness.light,
+          brightness: Brightness.dark,
           scaffoldBackgroundColor: const Color.fromARGB(148, 29, 28, 28)),
       home: const HomeView(),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/Widgets/add_note_bottom_sheet.dart';
 import 'package:notes_app/Widgets/custom_appbar.dart';
 import 'package:notes_app/Widgets/notes_list.dart';
 
@@ -26,7 +27,13 @@ class HomeView extends StatelessWidget {
           borderRadius: BorderRadius.circular(40),
         ),
         backgroundColor: Colors.lightBlue,
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return const AddNoteBottomSheet();
+              });
+        },
         child: const Icon(
           Icons.add,
           size: 30,
