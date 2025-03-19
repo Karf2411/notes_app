@@ -29,7 +29,7 @@ class CustomAppBar extends StatelessWidget {
             width: 45,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: Colors.white.withOpacity(.05),
+              color: Colors.white.withAlpha(13),
             ),
             child: IconButton(
               onPressed: onTap,
