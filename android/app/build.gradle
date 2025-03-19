@@ -7,8 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.notes_app"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    compileSdk = 35 // تحديد قيمة ثابتة لـ compileSdk
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -16,24 +15,19 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8
+        jvmTarget = "1.8"
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.notes_app"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        minSdk = 21 // تحديد قيمة ثابتة لـ minSdk
+        targetSdk = 35 // تحديد قيمة ثابتة لـ targetSdk
+        versionCode = 1 // تحديد قيمة ثابتة لـ versionCode
+        versionName = "1.0" // تحديد قيمة ثابتة لـ versionName
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.debug
         }
     }

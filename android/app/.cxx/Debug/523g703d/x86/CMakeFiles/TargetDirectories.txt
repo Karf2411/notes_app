@@ -1,0 +1,2 @@
+C:/Users/abdul/Desktop/Flutter/notes_app/android/app/.cxx/Debug/523g703d/x86/CMakeFiles/edit_cache.dir
+C:/Users/abdul/Desktop/Flutter/notes_app/android/app/.cxx/Debug/523g703d/x86/CMakeFiles/rebuild_cache.dir
