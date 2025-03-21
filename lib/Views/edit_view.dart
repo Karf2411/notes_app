@@ -25,13 +25,15 @@ class EditNoteView extends StatelessWidget {
                   }
                 },
               ),
-              const CustomTextField(
+              CustomTextField(
+                controller: TextEditingController(),
                 hintText: 'Title',
                 maxLine: 1,
                 fontSize: 20,
               ),
               const SizedBox(height: 16),
-              const CustomTextField(
+              CustomTextField(
+                controller: TextEditingController(),
                 hintText: 'Content',
                 maxLine: 7,
               ),

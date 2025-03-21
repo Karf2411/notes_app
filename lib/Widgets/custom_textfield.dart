@@ -3,15 +3,18 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
       {super.key,
+      required this.controller,
       required this.hintText,
       required this.maxLine,
       this.fontSize = 16});
+  final TextEditingController controller;
   final String hintText;
   final int maxLine;
   final double fontSize;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       validator: (value) {
         if (value!.isEmpty) {
           return 'the field is empty';
