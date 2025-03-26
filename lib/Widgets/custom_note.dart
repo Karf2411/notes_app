@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/Models/note_model.dart';
 import 'package:notes_app/Views/edit_view.dart';
 
 class CustomNote extends StatelessWidget {
-  const CustomNote({super.key});
-
+  const CustomNote({super.key, required this.note});
+  final NoteModel note;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -26,20 +27,20 @@ class CustomNote extends StatelessWidget {
           children: [
             ListTile(
               isThreeLine: true,
-              title: const Padding(
-                padding: EdgeInsets.only(bottom: 16, top: 10),
+              title: Padding(
+                padding: const EdgeInsets.only(bottom: 16, top: 10),
                 child: Text(
-                  'Flitter Tips',
-                  style: TextStyle(
+                  note.title,
+                  style: const TextStyle(
                     fontSize: 24,
                   ),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
-              subtitle: const Text(
-                'Build you carereer with flitter',
-                style: TextStyle(fontSize: 16),
+              subtitle: Text(
+                note.content,
+                style: const TextStyle(fontSize: 16),
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -55,11 +56,11 @@ class CustomNote extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            const Padding(
-              padding: EdgeInsets.only(right: 30, bottom: 30),
+            Padding(
+              padding: const EdgeInsets.only(right: 30, bottom: 30),
               child: Text(
-                'may 12, 2021',
-                style: TextStyle(fontSize: 13),
+                note.date,
+                style: const TextStyle(fontSize: 13),
               ),
             ),
           ],
