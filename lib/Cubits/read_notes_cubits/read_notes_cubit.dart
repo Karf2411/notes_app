@@ -5,7 +5,9 @@ import 'package:notes_app/Models/note_model.dart';
 import 'package:notes_app/helper/const.dart';
 
 class ReadNotesCubit extends Cubit<ReadNotesStates> {
-  ReadNotesCubit() : super(ReadNotesStates());
+  ReadNotesCubit() : super(ReadNotesStates()) {
+    fetchAllNotes();
+  }
 
   List<NoteModel> notes = [];
   void fetchAllNotes() {

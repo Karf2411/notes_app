@@ -13,8 +13,6 @@ class NotesList extends StatelessWidget {
     return Expanded(
       child: BlocBuilder<ReadNotesCubit, ReadNotesStates>(
         builder: (context, state) {
-          BlocProvider.of<ReadNotesCubit>(context)
-              .fetchAllNotes(); // Put the notes in the list
           List<NoteModel> notes =
               BlocProvider.of<ReadNotesCubit>(context).notes;
 

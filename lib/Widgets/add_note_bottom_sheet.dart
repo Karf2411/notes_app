@@ -13,6 +13,7 @@ class AddNoteBottomSheet extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: BlocProvider(
+        lazy: false,
         create: (context) => AddNoteCubit(),
         child: BlocListener<AddNoteCubit, AddNoteState>(
           listener: (context, state) {

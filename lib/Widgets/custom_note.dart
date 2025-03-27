@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notes_app/Cubits/read_notes_cubits/read_notes_cubit.dart';
 import 'package:notes_app/Models/note_model.dart';
 import 'package:notes_app/Views/edit_view.dart';
 
@@ -11,7 +13,9 @@ class CustomNote extends StatelessWidget {
       onTap: () => Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => EditNoteView(),
+          builder: (context) => EditNoteView(
+            note: note,
+          ),
         ),
       ),
       child: Container(
@@ -45,7 +49,10 @@ class CustomNote extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  note.delete();
+                  BlocProvider.of<ReadNotesCubit>(context).fetchAllNotes();
+                },
                 icon: const Padding(
                   padding: EdgeInsets.only(top: 20),
                   child: Icon(
