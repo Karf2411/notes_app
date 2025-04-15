@@ -8,6 +8,7 @@ import 'package:notes_app/Views/home_view.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:notes_app/helper/const.dart';
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = CubiObserver();
@@ -29,7 +30,7 @@ class NotesApp extends StatelessWidget {
         title: 'Notes',
         theme: ThemeData(
             brightness: Brightness.dark,
-            scaffoldBackgroundColor: const Color.fromARGB(148, 29, 28, 28)),
+            scaffoldBackgroundColor: const Color.fromARGB(67, 0, 0, 0)),
         home: const HomeView(),
       ),
     );

@@ -24,7 +24,7 @@ class CustomNote extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          color: Colors.black12,
+          color: Colors.white.withAlpha(13),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
