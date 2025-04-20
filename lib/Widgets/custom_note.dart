@@ -20,7 +20,7 @@ class CustomNote extends StatelessWidget {
       ),
       child: Container(
         margin: const EdgeInsets.only(bottom: 8),
-        height: 200,
+        height: 202,
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
@@ -64,7 +64,7 @@ class CustomNote extends StatelessWidget {
             ),
             const Spacer(),
             Padding(
-              padding: const EdgeInsets.only(right: 30, bottom: 30),
+              padding: const EdgeInsets.only(right: 24, bottom: 18),
               child: Text(
                 note.date,
                 style: const TextStyle(fontSize: 13),
